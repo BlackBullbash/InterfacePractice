@@ -6,6 +6,8 @@ public class Main {
 
     private IPrintable[] printables;
 
+    private IPrintable param;
+
     public static void main(String[] args) {
 	    Main App = new Main();
         App.runApp();
@@ -20,5 +22,16 @@ public class Main {
         for (IPrintable i: printables) {
             i.printInfo();
         }
+        param = new RandomObject(120, "Hey", "yyy", 456, -12);
+
+        Car volvo = new Car(20, "red", "df", 45, "6erfw");
+       // volvo.printInfo();
+        //System.out.println(volvo.getColor());
+
+        for (IPrintable i: printables) {
+            System.out.println(i.getClass());
+        }
+
+      // System.out.println(param);
     }
 }
